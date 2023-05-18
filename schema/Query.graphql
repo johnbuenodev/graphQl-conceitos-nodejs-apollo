@@ -1,0 +1,18 @@
+
+   # Pontos de entrada da sua API!
+   #consultas simples 
+   # add na frente do valor atributo esperado ! tem q voltar o valor
+   # exemplo ola: String!
+
+   type Query {
+      ola: String,
+      hour: String,
+      dataagora: Date,
+      usuariologado: Usuario,
+      produtoemdestaque: Produto
+      numerosmegasena: [Int!]!
+      usuarios: [Usuario!]!
+      usuario(id: Int, idPerfil: Int): Usuario # alterado de ID String para Int
+      perfis: [Perfil]
+      perfil(id: Int): Perfil
+   }

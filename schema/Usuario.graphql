@@ -1,0 +1,23 @@
+   type Perfil {
+    id: Int!
+    nome: String! 
+   }
+
+   enum UsuarioStatus {
+      ATIVO
+      INATIVO
+      BLOQUEADO
+   }
+
+   #Criando um tipo
+   #Tipo de Scalares que existem de default no GraphQL
+   type Usuario {
+    id: Int!  # alterado de ID String para  Int
+    nome: String!
+    email: String!
+    idade: Int 
+    salario: Float
+    vip: Boolean,
+    perfil: Perfil,
+    status: UsuarioStatus
+   }

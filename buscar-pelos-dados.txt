@@ -1,0 +1,78 @@
+{
+  hour 
+  ola
+  #usuariologado {
+  #  id
+ #   idade
+ #   nome
+ #   salario
+ #   vip
+ #   email
+ # }
+  produtoemdestaque {
+   nome
+   desconto
+   preco
+   precocomdesconto
+  }
+  
+  #numerosmegasena
+  
+#   usuarios {
+#     id
+#     nome
+#     idade
+#     email
+    
+#     perfil {
+#       id
+#       nome
+#     }
+    
+#   }
+  
+  # usuario (id: 2) {
+  #   id
+  #   nome
+  #   idade
+  #   email
+  # }
+  
+  #   usuario (id: 3) {
+  #   id
+  #   nome
+  #   idade
+  #   email
+  #   perfil {
+  #     id
+  #     nome
+  #   }
+  # }
+  
+  # perfis {
+  #   id
+  #   nome
+  # }
+  
+  # perfil(id: 1) {
+  #   id
+  #   nome
+  # }
+  
+  #Exemplo usando fragment para realizar a consulta
+  usuario(id: 2) {
+    ...usuarioCompleto
+  }
+  
+  usuarios {
+    ...usuarioCompleto
+  }
+  
+}
+
+fragment usuarioCompleto on Usuario {
+  id nome email idade salario vip
+  perfil {
+    id nome
+  }
+}
